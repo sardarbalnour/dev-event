@@ -5,6 +5,7 @@ import "./globals.css";
 
 import { cn } from "@/lib/utils";
 import LightRays from "@/components/LightRays";
+import Navbar from "@/components/Navbar";
 
 const geist = Geist({ subsets: ["latin"], variable: "--font-sans" });
 
@@ -29,6 +30,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       <body
         className={`${schibstedGrotesk.variable} ${martianMono.variable} min-h-screen antialiased`}
       >
+        <Navbar />
+
+        {/* Background */}
         <div className="absolute inset-0 top-0 z-[-1] min-h-screen">
           <LightRays
             raysOrigin="top-center-offset"
@@ -42,6 +46,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
             distortion={0.01}
           />
         </div>
+
         <main> {children}</main>
       </body>
     </html>
