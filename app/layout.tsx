@@ -33,7 +33,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <Navbar />
 
         {/* Background */}
-        <div className="absolute inset-0 top-0 z-[-1] min-h-screen">
+        <div className="fixed inset-0 -z-10">
           <LightRays
             raysOrigin="top-center-offset"
             raysColor="#5dfeca"
